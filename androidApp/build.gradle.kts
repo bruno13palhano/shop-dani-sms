@@ -39,6 +39,8 @@ android {
 }
 
 dependencies {
+    val koin = "3.2.0"
+
     implementation(project(":shared"))
     implementation("androidx.compose.ui:ui:1.4.3")
     implementation("androidx.compose.ui:ui-tooling:1.4.3")
@@ -46,4 +48,8 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:1.4.3")
     implementation("androidx.compose.material:material:1.4.3")
     implementation("androidx.activity:activity-compose:1.7.2")
+    implementation("io.insert-koin:koin-core:${koin}")
+    implementation("io.insert-koin:koin-test:${koin}")
+    implementation("io.insert-koin:koin-android:${koin}")
+    implementation ("io.insert-koin:koin-compose:1.0.3")
 }
