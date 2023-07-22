@@ -1,0 +1,14 @@
+CREATE TABLE Product (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    price REAL NOT NULL
+);
+
+insertProduct:
+INSERT INTO Product(name, price) VALUES(?,?);
+
+removeAllProducts:
+DELETE FROM Product;
+
+getAll:
+SELECT Product. * FROM Product;
