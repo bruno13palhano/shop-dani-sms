@@ -1,3 +1,23 @@
+buildscript {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.21")
+        classpath("com.squareup.sqldelight:gradle-plugin:1.5.5")
+        classpath("com.android.tools.build:gradle:8.0.2")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 plugins {
     //trick: for the same plugin versions in all sub-modules
     id("com.android.application").version("8.0.2").apply(false)
