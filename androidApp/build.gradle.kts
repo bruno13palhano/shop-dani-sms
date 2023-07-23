@@ -40,6 +40,7 @@ android {
 
 dependencies {
     val koin = "3.2.0"
+    val lifecycle_version = "2.6.1"
 
     implementation(project(":shared"))
     implementation("androidx.compose.ui:ui:1.4.3")
@@ -52,4 +53,7 @@ dependencies {
     implementation("io.insert-koin:koin-test:${koin}")
     implementation("io.insert-koin:koin-android:${koin}")
     implementation ("io.insert-koin:koin-compose:1.0.3")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:$lifecycle_version")
 }
