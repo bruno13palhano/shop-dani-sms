@@ -1,14 +1,30 @@
 CREATE TABLE Product (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    price REAL NOT NULL
+    description TEXT NOT NULL,
+    company TEXT NOT NULL,
+    purchasePrice REAL NOT NULL,
+    salePrice REAL NOT NULL,
+    isPaid INTEGER AS Boolean NOT NULL DEFAULT 0,
+    isSold INTEGER AS Boolean NOT NULL DEFAULT 0
 );
 
-insertProduct:
-INSERT INTO Product(name, price) VALUES(?,?);
+insert:
+INSERT INTO Product(name, description, company, purchasePrice, salePrice, isPaid, isSold)
+VALUES(?,?,?,?,?,?,?);
 
-removeAllProducts:
+removeAll:
 DELETE FROM Product;
+
+update:
+UPDATE Product SET name=?, description=?, company=?, purchasePrice=?, salePrice=?, isPaid=?,
+ isSold=? WHERE id=?;
+
+deleteById:
+DELETE FROM Product WHERE id=?;
+
+getById:
+SELECT Product. * FROM Product WHERE id=?;
 
 getAll:
 SELECT Product. * FROM Product;
