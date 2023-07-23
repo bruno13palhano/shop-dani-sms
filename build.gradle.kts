@@ -8,6 +8,7 @@ buildscript {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.21")
         classpath("com.squareup.sqldelight:gradle-plugin:1.5.5")
         classpath("com.android.tools.build:gradle:8.0.2")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.6.0")
     }
 }
 
