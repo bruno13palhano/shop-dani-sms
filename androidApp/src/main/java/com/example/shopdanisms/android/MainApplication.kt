@@ -10,7 +10,7 @@ class MainApplication : Application() {
         super.onCreate()
 
         startKoin {
-            modules(appModule() + androidModule)
+            modules(appModule() + androidModule(this@MainApplication))
         }
     }
 }
